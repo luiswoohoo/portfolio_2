@@ -1,0 +1,226 @@
+<div class="perspective-container">
+    <div class="scene">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
+</div>
+
+<style>
+    .perspective-container {
+        perspective: 1000px;
+    }
+
+    .scene {
+        position: relative;
+        transform-style: preserve-3d;
+        font-size: 7rem;
+    }
+
+    .layer {
+        position: absolute;
+        transform: translateZ(var(--tz));
+    }
+    .layer:nth-child(1) {
+        --tz: 1px;
+        --light: 13%;
+    }
+    .layer:nth-child(2) {
+        --tz: 2px;
+        --light: 16%;
+    }
+    .layer:nth-child(3) {
+        --tz: 3px;
+        --light: 19%;
+    }
+    .layer:nth-child(4) {
+        --tz: 4px;
+        --light: 22%;
+    }
+    .layer:nth-child(5) {
+        --tz: 5px;
+        --light: 25%;
+    }
+    .layer:nth-child(6) {
+        --tz: 6px;
+        --light: 28%;
+    }
+    .layer:nth-child(7) {
+        --tz: 7px;
+        --light: 31%;
+    }
+    .layer:nth-child(8) {
+        --tz: 8px;
+        --light: 34%;
+    }
+    .layer:nth-child(9) {
+        --tz: 9px;
+        --light: 37%;
+    }
+    .layer:nth-child(10) {
+        --tz: 10px;
+        --light: 40%;
+    }
+    .layer:nth-child(11) {
+        --tz: 11px;
+        --light: 43%;
+    }
+    .layer:nth-child(12) {
+        --tz: 12px;
+        --light: 46%;
+    }
+    .layer:nth-child(13) {
+        --tz: 13px;
+        --light: 49%;
+    }
+    .layer:nth-child(14) {
+        --tz: 14px;
+        --light: 52%;
+    }
+    .layer:nth-child(15) {
+        --tz: 15px;
+        --light: 55%;
+    }
+    .layer:nth-child(16) {
+        --tz: 16px;
+        --light: 58%;
+    }
+    .layer:nth-child(17) {
+        --tz: 17px;
+        --light: 61%;
+    }
+    .layer:nth-child(18) {
+        --tz: 18px;
+        --light: 64%;
+    }
+    .layer:nth-child(19) {
+        --tz: 19px;
+        --light: 67%;
+    }
+    .layer:nth-child(20) {
+        --tz: 20px;
+        --light: 70%;
+    }
+    .layer:nth-child(21) {
+        --tz: 21px;
+        --light: 73%;
+    }
+    .layer:nth-child(22) {
+        --tz: 22px;
+        --light: 76%;
+    }
+    .layer:nth-child(23) {
+        --tz: 23px;
+        --light: 79%;
+    }
+    .layer:nth-child(24) {
+        --tz: 24px;
+        --light: 82%;
+    }
+    .layer:nth-child(25) {
+        --tz: 25px;
+        --light: 85%;
+    }
+    .layer:nth-child(26) {
+        --tz: 26px;
+        --light: 88%;
+    }
+    .layer:nth-child(27) {
+        --tz: 27px;
+        --light: 91%;
+    }
+    .layer:nth-child(28) {
+        --tz: 28px;
+        --light: 94%;
+    }
+    .layer:nth-child(29) {
+        --tz: 29px;
+        --light: 97%;
+    }
+    .layer:nth-child(30) {
+        --tz: 30px;
+        --light: 100%;
+    }
+    .layer::after {
+        content: "Hello! I'm Luis";
+        color: hsl(0, 0%, var(--light));
+        animation: text 2s 1 step-end;
+    }
+    @keyframes text {
+        0% {
+            content: '';
+        }
+        7% {
+            content: 'H';
+        }
+        14% {
+            content: 'He';
+        }
+        21% {
+            content: 'Hel';
+        }
+        28% {
+            content: 'Hell';
+        }
+        35% {
+            content: 'Hello';
+        }
+        42% {
+            content: 'Hello!';
+        }
+        49% {
+            content: 'Hello! I';
+        }
+        56% {
+            content: "Hello! I'";
+        }
+        63% {
+            content: "Hello! I'm";
+        }
+        70% {
+            content: "Hello! I'm ";
+        }
+        77% {
+            content: "Hello! I'm L";
+        }
+        84% {
+            content: "Hello! I'm Lu";
+        }
+        91% {
+            content: "Hello! I'm Lui";
+        }
+        98% {
+            content: "Hello! I'm Luis";
+        }
+    }
+    .layer:first-child::after {
+        text-shadow: 0 0 10px #000;
+    }
+</style>
