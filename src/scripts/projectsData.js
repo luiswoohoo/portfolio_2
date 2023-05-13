@@ -7,6 +7,13 @@ const projectsData = [
         width: '700',
         height: '350',
         alt: 'Flashcards app',
+        longDescription: {
+            intro: `I was searching around for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something really simple without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
+            problems: `Initially, the card that was displayed was always the first card in an array. Moving from one card to the next was implemented by using the push and pop array methods. New cards were added to the beginning of the array and deleting a card meant removing the first card in the array. This worked well and the code was simple. However, when I decided I wanted to display the total number of cards and the number of the current card this implementation no longer worked. When moving from one card to the next the cards had to retain their index in the array.`,
+            lessons: `One of the lessons learned was to not underestimate seemingly simple features.`,
+            code: `https://github.com/luiswoohoo/flashcards_app`,
+            site: `https://cardstack.netlify.app/`,
+        },
     },
     {
         name: 'Quizzical',
@@ -16,15 +23,29 @@ const projectsData = [
         width: '700',
         height: '350',
         alt: 'Quiz app',
+        longDescription: {
+            intro: ``,
+            problems: ``,
+            lessons: ``,
+            code: `https://github.com/luiswoohoo/quizzical`,
+            site: `https://quizzicalr.netlify.app/`,
+        },
     },
     {
         name: 'Movie Finder',
         tech: 'JS • Serverless Functions',
-        description: `A movie finder app built in vanilla JS that pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
+        description: `A movie app built in vanilla JS that pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
         src: 'MovieFinder_figuse',
         width: '700',
         height: '350',
-        alt: 'Movide finder app',
+        alt: 'Movie finder app',
+        longDescription: {
+            intro: ``,
+            problems: ``,
+            lessons: ``,
+            code: `https://github.com/luiswoohoo/movie_search_test`,
+            site: `https://mov-watch.netlify.app/`,
+        },
     },
     {
         name: 'Google Apps Script',
@@ -34,6 +55,13 @@ const projectsData = [
         width: '700',
         height: '350',
         alt: 'Google Apps Script',
+        longDescription: {
+            intro: ``,
+            problems: ``,
+            lessons: ``,
+            code: ``,
+            site: ``,
+        },
     },
 ]
 

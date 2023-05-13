@@ -1,4 +1,12 @@
 ---
+// Component imports
+import TopNav from '../../components/TopNav.astro'
+import Footer from '../../components/Footer.astro'
+import CldImage from '../../components/CldImage.astro'
+
+// Styles import
+import '../../styles/global.css'
+
 // Data import
 import { projectsData } from '../../scripts/projectsData'
 
@@ -9,12 +17,48 @@ export function getStaticPaths() {
     //     { params: { project: 'project2' } },
     // ]
 
-    return projectsData.map((project) => {
-        return { params: { project: project.name.replaceAll(/\s/g, '').toLowerCase() } }
+    return projectsData.map((proj) => {
+        return {
+            params: { project: proj.name.replaceAll(/\s/g, '').toLowerCase() },
+            props: { proj },
+        }
     })
 }
 
-const { project } = Astro.params
+// const { project } = Astro.params
+const { proj } = Astro.props
+// const { project } = Astro.props
 ---
 
-<div>{project}</div>
+<TopNav />
+<body>
+    <h1>{proj.name}</h1>
+
+    <p>
+        <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}
+            >Site</a>
+    </p>
+    <br />
+    <p>{proj.longDescription.intro}</p>
+    <br />
+    <CldImage src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
+    <br>
+    <h2>Problems Encountered</h2>
+    <p>{proj.longDescription.problems}</p>
+    <br />
+    <h2>Lessons Learned</h2>
+    <p>{proj.longDescription.lessons}</p>
+</body>
+
+<Footer />
+
+<style>
+    body {
+        padding: 0 1rem;
+
+        background-color: var(--main-bg-color);
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--main-color);
+    }
+</style>

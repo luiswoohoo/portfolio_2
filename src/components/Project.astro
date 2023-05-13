@@ -24,38 +24,48 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 <style>
     .container {
         width: 100%;
+
+        color: var(--main-color);
     }
 
     .container-text {
-        width: 100%;
-
         display: flex;
         justify-content: space-between;
+
+        width: 100%;
+        padding-bottom: 1rem;
 
         border: 1px olive dashed;
     }
 
     .project-link {
-        color: black;
+        color: inherit;
+        text-decoration: none;
 
         &:link {
+            color: inherit;
         }
 
         &:visited {
-            /* color: deeppink; */
+            color: inherit;
         }
 
-        &:focus {
+        &:focus,
+        &:hover,
+        &:active {
+            color: rebeccapurple;
         }
 
-        &:hover {
+        /* &:hover {
+            color: deeppink;
         }
 
         &:active {
-        }
+            color: blue;
+        } */
     }
     .project-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
 
         border: 1px red solid;
     }

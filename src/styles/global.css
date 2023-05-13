@@ -66,3 +66,11 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
+
+/* 
+Color themes
+*/
+:root {
+    --main-color: hsl(0, 0%, 16%);
+    --main-bg-color: hsl(0, 0%, 99%);
+}
