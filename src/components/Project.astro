@@ -10,7 +10,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 ---
 
 <div class="container">
-    <a href=`/projects/${slug}`>
+    <a href=`/projects/${slug}` class="project-link">
         <div class="container-text">
             <h3 class="project-title">Project {projNum}</h3>
             <p>{tech}</p>
@@ -35,6 +35,25 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         border: 1px olive dashed;
     }
 
+    .project-link {
+        color: black;
+
+        &:link {
+        }
+
+        &:visited {
+            /* color: deeppink; */
+        }
+
+        &:focus {
+        }
+
+        &:hover {
+        }
+
+        &:active {
+        }
+    }
     .project-title {
         font-size: 3rem;
 
