@@ -1,0 +1,54 @@
+---
+// Component import
+import CldImageRound from './CldImageRound.astro'
+
+// Styles import
+import '../styles/global.css'
+---
+
+<header>
+    <div class="container">
+        <CldImageRound src={'Self_Portrait_01_exqkxi'} width={300} height={300} alt={'profile pic'} />
+        <div class="text">
+            <h1>Hello! I'm Luis</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio ipsum suscipit
+                blanditiis odit praesentium necessitatibus distinctio, sapiente veritatis laboriosam
+                unde nobis quia error reprehenderit maiores ducimus reiciendis ut itaque excepturi.
+            </p>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        width: 100%;
+        height: 100dvh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px red solid;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        border: 1px blue solid;
+    }
+    .profile {
+        width: 50%;
+        height: 10rem;
+        border: 1px green solid;
+    }
+
+    .text {
+        width: 50%;
+        border: 1px purple solid;
+    }
+</style>

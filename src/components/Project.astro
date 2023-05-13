@@ -1,0 +1,39 @@
+---
+// Import components
+import CldImage from './CldImage.astro'
+
+// Styles import
+import '../styles/global.css'
+
+const { projNum, tech, description, src, width, height, alt } = Astro.props
+---
+
+<div class="container">
+    <div class="container-text">
+        <h3 class="project-title">Project {projNum}</h3>
+        <p>{tech}</p>
+    </div>
+    <CldImage src={src} width={width} height={height} alt={alt} />
+    <p>{description}</p>
+</div>
+
+<style>
+    .container {
+        width: 100%;
+    }
+
+    .container-text {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        border: 1px olive dashed;
+    }
+
+    .project-title {
+        font-size: 3rem;
+
+        border: 1px red solid;
+    }
+</style>

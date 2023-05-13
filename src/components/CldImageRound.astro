@@ -1,0 +1,18 @@
+---
+import { Cloudinary } from '@cloudinary/url-gen'
+
+// Styles import
+import '../styles/global.css'
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'dh639nmhw',
+    },
+})
+
+const { src, width, height, alt } = Astro.props
+
+let cldSrc = cld.image(src).format('auto').delivery('q_auto').resize(`c_fill,g_face,w_${width},h_${height},r_max`)
+---
+
+<img src={cldSrc.toURL()} loading="lazy" alt={alt} />
