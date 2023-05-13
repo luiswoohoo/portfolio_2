@@ -29,7 +29,7 @@ const projectsData = [
     {
         name: 'Google Apps Script',
         tech: 'Google Apps Script',
-        description: `I had been creating invoices for a trucking business and wondered if there was a way to automate some of the more repetitive tasks. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This is what sparked my motivation to look into coding as a career.`,
+        description: `I was creating invoices for a trucking business and wondered if there was a way to automate some of the more repetitive tasks. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This is what sparked my motivation to look into coding as a career.`,
         src: 'GAS_kyjfhj',
         width: '700',
         height: '350',

@@ -14,7 +14,7 @@ const { projNum, tech, description, src, width, height, alt } = Astro.props
         <p>{tech}</p>
     </div>
     <CldImage src={src} width={width} height={height} alt={alt} />
-    <p>{description}</p>
+    <p class="project-description">{description}</p>
 </div>
 
 <style>
@@ -35,5 +35,9 @@ const { projNum, tech, description, src, width, height, alt } = Astro.props
         font-size: 3rem;
 
         border: 1px red solid;
+    }
+
+    .project-description {
+        padding-top: 1rem;
     }
 </style>
