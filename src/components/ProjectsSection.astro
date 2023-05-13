@@ -12,7 +12,7 @@ import { projectsData } from '../scripts/projectsData'
 <div>
     {
         projectsData.map((proj, index) => (
-            <Project projNum={index} tech={proj.tech} description={proj.description} src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
+            <Project projNum={index} name={proj.name} tech={proj.tech} description={proj.description} src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
         ))
     }
 </div>

@@ -1,0 +1,20 @@
+---
+// Data import
+import { projectsData } from '../../scripts/projectsData'
+
+export function getStaticPaths() {
+    // return [
+    //     { params: { project: 'cardstack' } },
+    //     { params: { project: 'project1' } },
+    //     { params: { project: 'project2' } },
+    // ]
+
+    return projectsData.map((project) => {
+        return { params: { project: project.name.replaceAll(/\s/g, '').toLowerCase() } }
+    })
+}
+
+const { project } = Astro.params
+---
+
+<div>{project}</div>

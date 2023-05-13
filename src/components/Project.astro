@@ -5,15 +5,19 @@ import CldImage from './CldImage.astro'
 // Styles import
 import '../styles/global.css'
 
-const { projNum, tech, description, src, width, height, alt } = Astro.props
+const { projNum, name, tech, description, src, width, height, alt } = Astro.props
+const slug = name.replaceAll(/\s/g, '').toLowerCase()
 ---
 
 <div class="container">
-    <div class="container-text">
-        <h3 class="project-title">Project {projNum}</h3>
-        <p>{tech}</p>
-    </div>
-    <CldImage src={src} width={width} height={height} alt={alt} />
+    <a href=`/projects/${slug}`>
+        <div class="container-text">
+            <h3 class="project-title">Project {projNum}</h3>
+            <p>{tech}</p>
+        </div>
+        <CldImage src={src} width={width} height={height} alt={alt} />
+    </a>
+
     <p class="project-description">{description}</p>
 </div>
 
@@ -38,6 +42,7 @@ const { projNum, tech, description, src, width, height, alt } = Astro.props
     }
 
     .project-description {
-        padding-top: 1rem;
+        max-width: 60ch;
+        padding: 1rem;
     }
 </style>
