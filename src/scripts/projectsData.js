@@ -8,9 +8,9 @@ const projectsData = [
         height: '350',
         alt: 'Flashcards app',
         longDescription: {
-            intro: `I was searching around for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something really simple without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
-            problems: `Initially, the card that was displayed was always the first card in an array. Moving from one card to the next was implemented by using the push and pop array methods. New cards were added to the beginning of the array and deleting a card meant removing the first card in the array. This worked well and the code was simple. However, when I decided I wanted to display the total number of cards and the number of the current card this implementation no longer worked. When moving from one card to the next the cards had to retain their index in the array.`,
-            lessons: `One of the lessons learned was to not underestimate seemingly simple features.`,
+            intro: `I was searching around for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something minimalistic without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
+            problems: `Initially, the card that was displayed was always the first card in an array. Moving from one card to the next was implemented by using the push and pop array methods. New cards were added to the beginning of the array and deleting a card meant removing the first card in the array. This worked well and the code was simple. However, I decided to implement what seemed like a very simple feature: display the total number of cards and the number of the current card. This little feature required a rewrite and it took a few days to figure out.`,
+            lessons: `One of the lessons learned was to not underestimate seemingly simple features. But also it doesn't seem like too many people are interested in a flashcard app, at least not the people I showed it to. Regardless it scratched an itch and I just wanted to see if I could code the thing.`,
             code: `https://github.com/luiswoohoo/flashcards_app`,
             site: `https://cardstack.netlify.app/`,
         },

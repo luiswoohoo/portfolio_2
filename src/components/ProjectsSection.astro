@@ -9,27 +9,39 @@ import '../styles/global.css'
 import { projectsData } from '../scripts/projectsData'
 ---
 
-<div>
-    {
-        projectsData.map((proj, index) => (
-            <Project projNum={index} name={proj.name} tech={proj.tech} description={proj.description} src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
-        ))
-    }
-</div>
+<section id="projects-section">
+    <h2 class="title">Projects</h2>
+    <div>
+        {
+            projectsData.map((proj, index) => (
+                <Project
+                    projNum={index}
+                    name={proj.name}
+                    tech={proj.tech}
+                    description={proj.description}
+                    src={proj.src}
+                    width={proj.width}
+                    height={proj.height}
+                    alt={proj.alt}
+                />
+            ))
+        }
+    </div>
 
-<style>
-    div {
-        width: 100%;
-        min-height: 100vh;
+    <style>
+        div {
+            width: 100%;
+            min-height: 100vh;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8rem;
 
-        /* padding: 4rem 0; */
+            /* padding: 4rem 0; */
 
-        border: 1px red solid;
-    }
-</style>
+            border: 1px red solid;
+        }
+    </style>
+</section>

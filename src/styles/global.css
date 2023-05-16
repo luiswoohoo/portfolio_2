@@ -74,3 +74,10 @@ Color themes
     --main-color: hsl(0, 0%, 16%);
     --main-bg-color: hsl(0, 0%, 99%);
 }
+
+/* 
+Scroll behavior
+ */
+html {
+  scroll-behavior: smooth;
+}
