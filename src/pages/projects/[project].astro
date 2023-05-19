@@ -1,22 +1,14 @@
 ---
-// Component imports
-import TopNav from '../../components/TopNav.astro'
-import Footer from '../../components/Footer.astro'
-import CldImage from '../../components/CldImage.astro'
+// Layout import
+import BaseLayout from '../../layouts/BaseLayout.astro'
 
-// Styles import
-import '../../styles/global.css'
+// Component imports
+import CldImage from '../../components/CldImage.astro'
 
 // Data import
 import { projectsData } from '../../scripts/projectsData'
 
 export function getStaticPaths() {
-    // return [
-    //     { params: { project: 'cardstack' } },
-    //     { params: { project: 'project1' } },
-    //     { params: { project: 'project2' } },
-    // ]
-
     return projectsData.map((proj) => {
         return {
             params: { project: proj.name.replaceAll(/\s/g, '').toLowerCase() },
@@ -25,43 +17,35 @@ export function getStaticPaths() {
     })
 }
 
-// const { project } = Astro.params
 const { proj } = Astro.props
-// const { project } = Astro.props
 ---
 
-<TopNav />
-<body>
-    <h1 class="project-title">{proj.name}</h1>
+<BaseLayout pageTitle={proj.name}>
+    <div class="container">
+        <h1 class="project-title">{proj.name}</h1>
 
-    <p>
         <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}>Site</a
         >
-    </p>
-    <br />
-    <p class="project-info">{proj.longDescription.intro}</p>
-    <br />
-    <CldImage src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
-    <br />
-    <h2 class="subtitle">Problems Encountered</h2>
-    <p class="project-info">{proj.longDescription.problems}</p>
-    <br />
-    <h2 class="subtitle">Lessons Learned</h2>
-    <p class="project-info">{proj.longDescription.lessons}</p>
-</body>
 
-<Footer />
+        <section>
+            <p class="project-info">{proj.longDescription.intro}</p>
+        </section>
+
+        <CldImage src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
+
+        <section>
+            <h2 class="subtitle">Problems Encountered</h2>
+            <p class="project-info">{proj.longDescription.problems}</p>
+        </section>
+
+        <section>
+            <h2 class="subtitle">Lessons Learned</h2>
+            <p class="project-info">{proj.longDescription.lessons}</p>
+        </section>
+    </div>
+</BaseLayout>
 
 <style>
-    body {
-        padding: 0 1rem;
-
-        background-color: var(--main-bg-color);
-
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--main-color);
-    }
-
     .project-title {
         padding-top: 4rem;
 

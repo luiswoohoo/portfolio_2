@@ -1,43 +1,17 @@
 ---
+// Layout import
+import BaseLayout from '../layouts/BaseLayout.astro'
+
 // Component imports
-import TopNav from '../components/TopNav.astro'
 import IntroSection from '../components/IntroSection.astro'
 import ProjectsSection from '../components/ProjectsSection.astro'
 import ContactSection from '../components/ContactSection.astro'
-import Footer from '../components/Footer.astro'
 
-// Styles import
-import '../styles/global.css'
+const pageTitle = 'Luis Aguiñaga'
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Luis Aguiñaga</title>
-    </head>
-    <body>
-        <TopNav />
-        <IntroSection />
-        <ProjectsSection />
-        <ContactSection />
-        <Footer />
-    </body>
-</html>
-
-<style>
-    /* html {
-        color-scheme: light dark;
-    } */
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-
-        padding: 0 1rem;
-
-        background-color: var(--main-bg-color);
-
-        border: 2px black solid;
-    }
-</style>
+<BaseLayout pageTitle={pageTitle}>
+    <IntroSection />
+    <ProjectsSection />
+    <ContactSection />
+</BaseLayout>
