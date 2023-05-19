@@ -3,6 +3,25 @@
 
 <div class="nav-links">
     <a href="/">Home</a>
-    <a href="/#projects-section">Projects</a>
-    <a href="/#contact-section">Contact</a>
+    <a onclick="scrollToAnchor('#projects-section')">Projects</a>
+    <a onclick="scrollToAnchor('#contact-section')">Contact</a>
 </div>
+
+<script is:inline>
+    function scrollToAnchor(selectedAnchor) {
+        if (!document.querySelector(selectedAnchor)) {
+            console.log('no selected anchor')
+            window.location.href = `http://localhost:3000/${selectedAnchor}`
+        } else {
+            document.querySelector(selectedAnchor).scrollIntoView({
+                behavior: 'smooth',
+            })
+        }
+    }
+</script>
+
+<style>
+    a {
+        cursor: pointer;
+    }
+</style>
