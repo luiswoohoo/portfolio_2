@@ -3,7 +3,7 @@
 import CldImageRound from './CldImageRound.astro'
 
 // Styles import
-import '../styles/global.css'
+// import '../styles/global.css'
 ---
 
 <header>
@@ -14,9 +14,8 @@ import '../styles/global.css'
             height={300}
             alt={'profile pic'}
         />
-        <div class="text">
-            <h1 class="title">Hi! I'm Luis<br />A Web Developer</h1>
-        </div>
+
+        <h1 class="title">Hi! I'm Luis<br />A Web Developer</h1>
     </div>
 </header>
 
@@ -38,18 +37,10 @@ import '../styles/global.css'
         gap: 1rem;
 
         width: 100%;
-
-        /* padding: 8rem 0; */
-
-        color: var(--main-color);
     }
 
-    .text {
-        /* min-width: 80%; */
-
-        .title {
-            font-size: 2.5rem;
-            text-align: center;
-        }
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
     }
 </style>

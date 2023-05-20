@@ -3,7 +3,7 @@
 import Project from './Project.astro'
 
 // Styles import
-import '../styles/global.css'
+// import '../styles/global.css'
 
 // Data import
 import { projectsData } from '../scripts/projectsData'
@@ -11,7 +11,7 @@ import { projectsData } from '../scripts/projectsData'
 
 <section id="projects-section">
     <h2 class="title">Projects</h2>
-    <div>
+    <div class="projects">
         {
             projectsData.map((proj, index) => (
                 <Project
@@ -29,7 +29,7 @@ import { projectsData } from '../scripts/projectsData'
     </div>
 
     <style>
-        div {
+        .projects {
             width: 100%;
             min-height: 100vh;
 

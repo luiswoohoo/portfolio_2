@@ -2,7 +2,7 @@ const projectsData = [
     {
         name: 'Card Stack',
         tech: 'React • Styled Components',
-        description: `I was searching around for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own.`,
+        description: `I was searching around for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I made my own.`,
         src: 'CardStack_gttvbn',
         width: '700',
         height: '350',

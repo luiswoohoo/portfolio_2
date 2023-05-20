@@ -70,22 +70,35 @@ h6 {
 }
 
 /* 
-Color themes
+Custom properties (variables)
 */
 :root {
+    /* Color */
     --main-color: hsl(0, 0%, 16%);
     --main-bg-color: hsl(0, 0%, 99%);
+
+    /* Font sizes */
+
+    --small: 12px;
+    --medium: 16px;
+    --large: 24px;
 }
 
 /* 
 Scroll behavior
  */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion) {
-  html {
-    scroll-behavior: auto;
-  }
+    html {
+        scroll-behavior: auto;
+    }
 }
+
+/* @media screen and (min-width: 768px) {
+  .hamburger {
+      display: none;
+  }
+} */
