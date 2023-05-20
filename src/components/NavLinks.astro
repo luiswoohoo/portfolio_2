@@ -21,7 +21,34 @@
 </script>
 
 <style>
-    a {
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+        /* position: absolute;
+        background-color: rebeccapurple; */
+
+    }
+    .nav-links a {
+        text-decoration: none;
+        text-transform: lowercase;
         cursor: pointer;
+    }
+
+    .expanded {
+        display: unset;
+    }
+
+    @media screen and (min-width: 768px) {
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-links a {
+        /* display: inline-block; */
+        /* padding: 15px 20px; */
     }
 </style>

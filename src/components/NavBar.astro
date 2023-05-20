@@ -1,0 +1,62 @@
+---
+// Component import
+import NavLinks from './NavLinks.astro'
+import Hamburger from './Hamburger.astro'
+import ThemeToggle from './ThemeToggle.astro'
+---
+
+<nav class="navbar">
+    <div class="nav-links">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 16px 48px;
+    }
+
+    .nav-links ul {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links li a {
+        /* display: block; */
+        /* padding: 1rem; */
+        margin: 1rem;
+        text-decoration: none;
+
+        color: inherit;
+        text-transform: lowercase;
+        border: 1px black solid;
+
+        &:link {
+            color: inherit;
+        }
+
+        &:visited {
+            color: inherit;
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: rebeccapurple;
+        }
+    }
+</style>
