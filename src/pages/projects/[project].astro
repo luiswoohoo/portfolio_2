@@ -24,14 +24,17 @@ const { proj } = Astro.props
     <div class="container">
         <h1 class="project-title">{proj.name}</h1>
 
-        <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}>Site</a
-        >
+        <div class="project-links">
+            <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}
+                >Site</a
+            >
+        </div>
 
         <section>
             <p class="project-info">{proj.longDescription.intro}</p>
         </section>
 
-        <CldImage src={proj.src} width={proj.width} height={proj.height} alt={proj.alt} />
+        <CldImage src={proj.src} width={1400} height={700} alt={proj.alt} />
 
         <section>
             <h2 class="subtitle">Problems Encountered</h2>
@@ -46,10 +49,20 @@ const { proj } = Astro.props
 </BaseLayout>
 
 <style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 0 max(2rem, 50vw - 1200px / 2);
+    }
     .project-title {
         padding-top: 4rem;
 
-        font-size: 2.5rem;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+
+        text-align: center;
     }
 
     .subtitle {
@@ -60,9 +73,9 @@ const { proj } = Astro.props
     }
 
     .project-info {
-        max-width: 60ch;
+        max-width: 75ch;
         padding-top: 1rem;
 
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
     }
 </style>

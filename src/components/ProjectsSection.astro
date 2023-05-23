@@ -6,7 +6,7 @@ import Project from './Project.astro'
 import { projectsData } from '../scripts/projectsData'
 ---
 
-<section id="projects-section">
+<section id="projects-section" class="projects-section">
     <h2 class="title">Projects</h2>
     <div class="projects">
         {
@@ -26,6 +26,9 @@ import { projectsData } from '../scripts/projectsData'
     </div>
 
     <style>
+        .projects-section {
+            padding: 0 max(2rem, 50vw - 1200px / 2);
+        }
         .title {
             font-size: 2.5rem;
             padding-bottom: 2rem;
