@@ -12,7 +12,7 @@ import CldImageRound from './CldImageRound.astro'
             alt={'profile pic'}
         />
 
-        <h1 class="title">Hi! I'm Luis<br>A Web Developer</h1>
+        <h1 class="title">Hi! I'm Luis<br />A Web Developer</h1>
     </div>
 </header>
 
@@ -43,5 +43,11 @@ import CldImageRound from './CldImageRound.astro'
         font-size: 2.5rem;
         text-align: center;
         line-height: 1.2;
+    }
+
+    @media screen and (min-width: 768px) {
+        .title {
+            font-size: 4rem;
+        }
     }
 </style>

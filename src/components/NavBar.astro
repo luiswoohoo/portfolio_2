@@ -49,8 +49,6 @@ import ThemeToggle from './ThemeToggle.astro'
                 text-decoration: none;
                 text-transform: lowercase;
 
-                border: 1px black solid;
-
                 transition: translate ease 0.2s;
 
                 &:link {
@@ -78,5 +76,11 @@ import ThemeToggle from './ThemeToggle.astro'
     .nav-links li:hover > a {
         transition: translate ease 0.2s;
         translate: 0 -2px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .nav-links {
+            font-size: 1.25rem;
+        }
     }
 </style>
