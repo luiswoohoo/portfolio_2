@@ -48,15 +48,15 @@ const projectsData = [
         },
     },
     {
-        name: 'Google Apps Script',
+        name: 'Invoice Automation',
         tech: 'Google Apps Script',
-        description: `I was creating invoices for a trucking business and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. I was able to speed up my workflow and discovered how much I enjoy coding.`,
+        description: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. I was able to speed up my workflow and discovered how much I enjoy coding.`,
         src: 'GAS_kyjfhj',
         width: '700',
         height: '350',
         alt: 'Google Apps Script',
         longDescription: {
-            intro: `I was creating invoices for a trucking business and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This sparked my motivation to consider coding as a career.`,
+            intro: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This sparked my motivation to consider coding as a career.`,
             problems: ``,
             lessons: ``,
             code: ``,
