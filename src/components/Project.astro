@@ -7,15 +7,14 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 ---
 
 <div class="container">
-    <div class="project-title-tech">
-        <div class="project-title text">
-            <a href=`/projects/${slug}` class="project-link">
-                <h3>{name}</h3>
-            </a>
-        </div>
+    <div class="project-text">
+        <a href=`/projects/${slug}` class="project-link">
+            <h3>{name}</h3>
+        </a>
 
-        <div class="project-tech text"><p>{tech}</p></div>
-        <div class="project-description text"><p>{description}</p></div>
+        <p class="project-tech">{tech}</p>
+        <p class="project-description">{description}</p>
+        <a href=`/projects/${slug}` class="project-details">Project Details</a>
     </div>
 
     <div class="project-image">
@@ -32,7 +31,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         color: var(--main-color);
     }
 
-    .project-title {
+    .project-text {
         & h3 {
             font-size: clamp(2.5rem, 5vw, 4rem);
         }
@@ -43,7 +42,58 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 
         padding: 1rem 0;
     }
+    a {
+        position: relative;
+        font-size: 1em;
+        display: inline-block;
+        transition: color 0.2s;
+    }
+    .project-details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        width: 200px;
+        height: 70px;
+
+        text-decoration: none;
+        cursor: pointer;
+
+        /* transition:  */
+
+        &:link {
+            color: inherit;
+        }
+
+        &:visited {
+            color: inherit;
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: rebeccapurple;
+        }
+    }
+
+    .project-details {
+        position: relative;
+        display: inline-block;
+        padding: 15px 70px;
+        border: 5px solid #b17461;
+        color: #b17461;
+        font-size: 30px;
+        font-family: arial;
+        background-image: radial-gradient(#9b8f06, #616eb1);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.5s, color 0.5s;
+    }
+    .project-details:hover {
+        background-size: 100% 100%;
+        color: #fff;
+    }
     .project-link {
         display: block;
         color: inherit;

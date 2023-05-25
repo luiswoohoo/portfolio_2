@@ -49,7 +49,7 @@ import ThemeToggle from './ThemeToggle.astro'
                 text-decoration: none;
                 text-transform: lowercase;
 
-                transition: translate ease 0.2s;
+                transition: translate ease 0.4s;
 
                 &:link {
                     color: inherit;
@@ -67,6 +67,7 @@ import ThemeToggle from './ThemeToggle.astro'
 
                 &:focus {
                     translate: 0 -2px;
+                    transition: translate ease .2s;
                 }
             }
         }
@@ -74,8 +75,8 @@ import ThemeToggle from './ThemeToggle.astro'
 
     /* This eliminates jitter when mouse cursor sits right on top of bottom border */
     .nav-links li:hover > a {
-        transition: translate ease 0.2s;
         translate: 0 -2px;
+        transition: translate ease .2s;
     }
 
     @media screen and (min-width: 768px) {

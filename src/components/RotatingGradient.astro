@@ -1,0 +1,49 @@
+---
+const { color1, color2, color3, borderRadius, inset, rotationDuration, blur } = Astro.props
+---
+
+<div class="container">
+    <slot />
+</div>
+
+<style define:vars={{ color1, color2, color3, borderRadius, inset, rotationDuration, blur }}>
+    @property --gradient-angle {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+    }
+
+    .container {
+        position: relative;
+        border-radius: var(--borderRadius, 50%);
+    }
+
+    .container::before,
+    .container::after {
+        content: '';
+        position: absolute;
+        inset: var(--inset, -0.1rem);
+        z-index: -1;
+
+        background: conic-gradient(
+            from var(--gradient-angle, 0deg),
+            var(--color1, rebeccapurple),
+            var(--color2, blue),
+            var(--color3, deeppink),
+            var(--color2, blue),
+            var(--color1, rebeccapurple)
+        );
+        border-radius: inherit;
+        animation: rotation linear infinite;
+        animation-duration: var(--rotationDuration, 5s);
+    }
+    .container::after {
+        filter: blur(var(--blur, 5rem));
+    }
+
+    @keyframes rotation {
+        100% {
+            --gradient-angle: 360deg;
+        }
+    }
+</style>

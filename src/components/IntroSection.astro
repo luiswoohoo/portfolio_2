@@ -1,17 +1,27 @@
 ---
 // Component import
 import CldImageRound from './CldImageRound.astro'
+import RotatingGradient from './RotatingGradient.astro'
 ---
 
 <header>
     <div class="container">
-        <CldImageRound
-            src={'Self_Portrait_01_exqkxi'}
-            width={300}
-            height={300}
-            alt={'profile pic'}
-        />
-
+        <RotatingGradient
+            color1={'#073438'}
+            color2={'#2d8f85'}
+            color3={'deeppink'}
+            borderRadius={'50%'}
+            inset={'-0.1rem'}
+            rotationDuration={'5s'}
+            blur={'5rem'}
+        >
+            <CldImageRound
+                src={'Self_Portrait_01_exqkxi'}
+                width={300}
+                height={300}
+                alt={'profile pic'}
+            />
+        </RotatingGradient>
         <h1 class="title">Hi! I'm Luis<br />A Web Developer</h1>
     </div>
 </header>
@@ -44,4 +54,54 @@ import CldImageRound from './CldImageRound.astro'
         text-align: center;
         line-height: 1.2;
     }
+
+    /* Start: Rotating gradient border around image */
+    @property --gradient-angle {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+    }
+
+    :root {
+        --clr-1: #052b2f;
+        --clr-2: #073438;
+        --clr-3: #0e4b50;
+        --clr-4: #2d8f85;
+        --clr-5: deeppink;
+    }
+    .container-image {
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .container-image::before,
+    .container-image::after {
+        content: '';
+        position: absolute;
+        inset: -0.1rem;
+        z-index: -1;
+        background: conic-gradient(
+            from var(--gradient-angle),
+            var(--clr-3),
+            var(--clr-4),
+            var(--clr-5),
+            var(--clr-4),
+            var(--clr-3)
+        );
+        border-radius: inherit;
+        animation: rotation 5s linear infinite;
+    }
+    .container-image::after {
+        filter: blur(5rem);
+    }
+
+    @keyframes rotation {
+        /* 0% {
+            --gradient-angle: 0deg;
+        } */
+        100% {
+            --gradient-angle: 360deg;
+        }
+    }
+    /* End: Rotating gradient border around image */
 </style>
