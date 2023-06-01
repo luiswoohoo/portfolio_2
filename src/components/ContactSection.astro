@@ -1,21 +1,18 @@
 ---
+import ContactForm from './ContactForm.astro'
 ---
 
-<section id="contact-section">
-    <h2>Contact</h2>
+<section id="contact-section" class="contact-section">
+    <h2 class="title">Contact</h2>
+    <ContactForm />
 </section>
 
 <style>
-    div {
-        width: 100%;
-        min-height: 50dvh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 1rem 0;
-
-        border: 1px red solid;
+    .contact-section {
+        padding: 0 max(2rem, 50vw - 1200px / 2);
+    }
+    .title {
+        font-size: 2.5rem;
+        padding: 3rem 0;
     }
 </style>

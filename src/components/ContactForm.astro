@@ -1,0 +1,49 @@
+---
+---
+
+<div class="container">
+    <form name="contact" method="POST" class="container-form">
+        <label for="name" class="visually-hidden">Name</label>
+        <input type="text" name="name" placeholder="Name" />
+
+        <label for="email" class="visually-hidden">Email</label>
+        <input type="email" name="email" placeholder="Email" />
+
+        <label for="message" class="visually-hidden">Message</label>
+        <textarea name="message" placeholder="Leave a message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<style>
+    .container {
+        width: 100%;
+        min-height: 80vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .container-form {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        gap: 2rem;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+    }
+</style>

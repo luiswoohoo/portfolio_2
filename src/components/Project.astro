@@ -8,14 +8,12 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 
 <div class="container">
     <div class="project-text">
-        <a href=`/projects/${slug}` class="project-link">
-            <h3>{name}</h3>
-        </a>
+        <h3>{name}</h3>
 
         <p class="project-tech">{tech}</p>
         <p class="project-description">{description}</p>
 
-        <div class="project-details-button">
+        <div class="container-project-details">
             <a href=`/projects/${slug}` class="project-link project-details">See Project Details</a>
         </div>
     </div>
@@ -40,6 +38,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 
     .project-text h3 {
         font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-top: -1rem;
     }
 
     .project-description {
@@ -66,14 +65,25 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         color: rebeccapurple;
     }
 
-    .project-details-button {
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
+    .container-project-details {
         width: 200px;
-        aspect-ratio: 2.5 / 1; */
+        aspect-ratio: 2.5 / 1;
 
-        width: 200px;
+        background-image: linear-gradient(to left, #743ad5, #d53a9d), url(../styles/noise.svg);
+        background-blend-mode: multiply;
+
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 0%;
+
+        transition: background-size 0.4s ease;
+    }
+
+    .project-details {
+        display: grid;
+        place-content: center;
+
+        width: 100%;
         aspect-ratio: 2.5 / 1;
 
         border: 10px solid;
@@ -81,50 +91,19 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         border-width: 2px;
         border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 
-        background-image: linear-gradient(to left, #743ad5, #d53a9d), url(../styles/noise.svg);
-        background-blend-mode:multiply;
+        transition: color 0.4s ease;
+    }
 
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 0%;
-
-        /* transition: transform 0.2s ease; */
+    .container-project-details:focus-within,
+    .container-project-details:hover {
+        background-size: 100% 100%;
         transition: background-size 0.2s ease;
-
-        /* padding: 0.1rem; */
     }
 
-    .project-details {
-        display: grid;
-        place-content: center;
-        position: relative;
-        width: 200px;
-        aspect-ratio: 2.5 / 1;
-        /* background-color: white; */
-        /* background-image: white; */
-
-        /* background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%; */
-/* 
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 0%; */
-
-        transition: transform 0.2s ease;
-        transition: background-size 2s ease;
-        /* transition: color 0.2s ease; */
-    }
-
-    .project-details-button:hover {
-        /* transform: skewX(-10deg); */
-        background-size: 100% 300%;
-    }
-
+    .project-details:focus,
     .project-details:hover {
-        /* transform: skewX(10deg); */
-        /* background-size: 0% 0%; */
         color: white;
+        transition: color 0.2s ease;
     }
 
     @media screen and (min-width: 768px) {
@@ -141,6 +120,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 
         .project-description {
             grid-row-start: 2;
+            padding: 2rem 0;
         }
         .project-image {
             grid-column-start: 2;
