@@ -14,10 +14,6 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         <p class="project-tech">{tech}</p>
         <p class="project-description">{description}</p>
 
-        <!-- <div class="container-project-details">
-            <a href=`/projects/${slug}` class="project-link project-details">See Project Details</a>
-        </div> -->
-
         <GradientButton
             href={`/projects/${slug}`}
             width={'200px'}
@@ -77,47 +73,6 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
     .project-link:active {
         color: rebeccapurple;
     }
-
-    /* .container-project-details {
-        width: 200px;
-        aspect-ratio: 2.5 / 1;
-
-        background-image: linear-gradient(to left, #743ad5, #d53a9d), url("../styles/noise.svg");
-        background-blend-mode: multiply;
-
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 0%;
-
-        transition: background-size 0.4s ease;
-    }
-
-    .project-details {
-        display: grid;
-        place-content: center;
-
-        width: 100%;
-        height: 100%;
-
-        border: 10px solid;
-        border-image-slice: 1;
-        border-width: 2px;
-        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-
-        transition: color 0.4s ease;
-    }
-
-    .container-project-details:focus-within,
-    .container-project-details:hover {
-        background-size: 100% 100%;
-        transition: background-size 0.2s ease;
-    }
-
-    .project-details:focus,
-    .project-details:hover {
-        color: white;
-        transition: color 0.2s ease;
-    } */
 
     @media screen and (min-width: 768px) {
         .container {
