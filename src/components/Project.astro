@@ -1,8 +1,9 @@
 ---
 // Import components
 import CldImage from './CldImage.astro'
+import GradientButton from './GradientButton.astro'
 
-const { projNum, name, tech, description, src, width, height, alt } = Astro.props
+const { name, tech, description, src, width, height, alt } = Astro.props
 const slug = name.replaceAll(/\s/g, '').toLowerCase()
 ---
 
@@ -13,9 +14,21 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         <p class="project-tech">{tech}</p>
         <p class="project-description">{description}</p>
 
-        <div class="container-project-details">
+        <!-- <div class="container-project-details">
             <a href=`/projects/${slug}` class="project-link project-details">See Project Details</a>
-        </div>
+        </div> -->
+
+        <GradientButton
+            href={`/projects/${slug}`}
+            width={'200px'}
+            aspectRatio={'2.5 / 1'}
+            color1={'#d53a9d'}
+            color2={'#743ad5'}
+            transitionDelayStart={'0.2s'}
+            transitionDelayEnd={'0.4s'}
+        >
+            See Project Details
+        </GradientButton>
     </div>
 
     <div class="project-image">
@@ -65,11 +78,11 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         color: rebeccapurple;
     }
 
-    .container-project-details {
+    /* .container-project-details {
         width: 200px;
         aspect-ratio: 2.5 / 1;
 
-        background-image: linear-gradient(to left, #743ad5, #d53a9d), url(../styles/noise.svg);
+        background-image: linear-gradient(to left, #743ad5, #d53a9d), url("../styles/noise.svg");
         background-blend-mode: multiply;
 
         background-position: 100% 100%;
@@ -84,7 +97,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
         place-content: center;
 
         width: 100%;
-        aspect-ratio: 2.5 / 1;
+        height: 100%;
 
         border: 10px solid;
         border-image-slice: 1;
@@ -104,7 +117,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
     .project-details:hover {
         color: white;
         transition: color 0.2s ease;
-    }
+    } */
 
     @media screen and (min-width: 768px) {
         .container {

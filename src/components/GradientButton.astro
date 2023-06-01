@@ -1,0 +1,77 @@
+---
+const { href, width, aspectRatio, color1, color2, transitionDelayStart, transitionDelayEnd } =
+    Astro.props
+---
+
+<div class="container">
+    <a href={href}>
+        <slot />
+    </a>
+</div>
+
+<style
+    define:vars={{
+        width,
+        aspectRatio,
+        color1,
+        color2,
+        transitionDelayStart,
+        transitionDelayEnd,
+    }}
+>
+    .container {
+        width: var(--width, 200px);
+        aspect-ratio: var(--aspectRatio, 2.5 / 1);
+
+        background-image: linear-gradient(to left, var(--color1, #743ad5), var(--color2, #d53a9d)),
+            url('../styles/noise.svg');
+
+        background-blend-mode: multiply;
+
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 0%;
+
+        transition: background-size var(--transitionDelayEnd, 0.4s) ease;
+    }
+
+    a {
+        display: grid;
+        place-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(
+            to left,
+            var(--color1, #743ad5),
+            var(--color2, #d53a9d)
+        );
+
+        transition: color var(--transitionDelayEnd, 0.4s) ease;
+    }
+
+    .container:focus-within,
+    .container:hover {
+        background-size: 100% 100%;
+        transition: background-size var(--transitionDelayStart, 0.2s) ease;
+    }
+
+    a:link,
+    a:visited {
+        color: inherit;
+    }
+
+    a:focus,
+    a:hover {
+        color: white;
+        transition: color var(--transitionDelayStart, 0.2s) ease;
+    }
+</style>

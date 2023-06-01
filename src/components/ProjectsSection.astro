@@ -10,9 +10,8 @@ import { projectsData } from '../scripts/projectsData'
     <h2 class="title">Projects</h2>
     <div class="projects">
         {
-            projectsData.map((proj, index) => (
+            projectsData.map((proj) => (
                 <Project
-                    projNum={index}
                     name={proj.name}
                     tech={proj.tech}
                     description={proj.description}
