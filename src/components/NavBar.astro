@@ -1,7 +1,10 @@
 ---
+const currentEnv = import.meta.env.MODE
 ---
 
 <nav class="navbar">
+    <p>{currentEnv}</p>
+   
     <div class="nav-links">
         <ul>
             <li><a href="/" class="nav-link">Home</a></li>

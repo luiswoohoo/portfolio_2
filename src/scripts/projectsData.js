@@ -32,9 +32,9 @@ const projectsData = [
         },
     },
     {
-        name: 'Movie Finder',
+        name: 'Movie Watchlist',
         tech: 'JS • Serverless Functions',
-        description: `A movie app built in vanilla JS that pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
+        description: `A movie app for creating a watchlist built in vanilla JS that pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
         src: 'MovieFinder_figuse',
         width: '500',
         height: '480',
