@@ -12,7 +12,14 @@ import ContactForm from './ContactForm.astro'
         padding: 0 max(2rem, 50vw - 1200px / 2);
     }
     .title {
-        font-size: 2.5rem;
+        font-size: clamp(2.5rem, 5vw, 4rem);
         padding: 3rem 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        .title {
+            display: flex;
+            justify-content: center;
+        }
     }
 </style>

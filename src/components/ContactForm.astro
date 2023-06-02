@@ -1,19 +1,18 @@
 ---
 ---
 
-<form name="contact" method="POST" netlify-honeypot="website-url" class="container" netlify>
+<form name="contact" method="POST" netlify-honeypot="website-url" class="container" data-netlify="true">
     <label class="sr-only" for="website-url">Your website</label>
     <input class="sr-only" type="text" name="website-url" tabindex="-1" autocomplete="off" />
 
     <label for="name" class="sr-only">Name</label>
-    <input class="reset-input base-input" type="text" name="name" placeholder="Name" />
+    <input class="base-input" type="text" name="name" placeholder="Name" />
 
     <label for="email" class="sr-only">Email</label>
-    <input class="reset-input base-input" type="email" name="email" placeholder="Email" />
+    <input class="base-input" type="email" name="email" placeholder="Email" />
 
     <label for="message" class="sr-only">Message</label>
-    <textarea class="reset-input base-input" name="message" placeholder="Leave a message" rows="6"
-    ></textarea>
+    <textarea class="base-input" name="message" placeholder="Leave a message" rows="6"></textarea>
 
     <button type="submit" class="reset-button gradient-button">Send</button>
 </form>
@@ -28,8 +27,6 @@
 
         width: 100%;
         padding-bottom: 8rem;
-
-        border: 1px red solid;
     }
 
     .sr-only {
@@ -43,17 +40,15 @@
         padding: 0;
     }
 
-    .reset-input {
-        border: none;
-        background-image: none;
-        background-color: transparent;
-        box-shadow: none;
-    }
-
     .base-input {
         width: clamp(200px, 100%, 500px);
         border: 2px black solid;
         padding: 8px;
+
+        /* Reset styles */
+        background-image: none;
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .reset-button {
@@ -81,9 +76,9 @@
 
         background-blend-mode: multiply;
 
-        background-position: 100% 100%;
+        /* background-position: 100% 100%;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 100%; */
 
         border: 10px solid;
         border-image-slice: 1;
