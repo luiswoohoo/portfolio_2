@@ -1,15 +1,14 @@
 ---
-const currentEnv = import.meta.env.MODE
+import { config } from '../scripts/urls'
+const url = config.url
 ---
 
 <nav class="navbar">
-    <p>{currentEnv}</p>
-   
     <div class="nav-links">
         <ul>
             <li><a href="/" class="nav-link">Home</a></li>
-            <li><a href="#projects-section" class="nav-link">Projects</a></li>
-            <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            <li><a href=`${url}#projects-section` class="nav-link">Projects</a></li>
+            <li><a href=`${url}#contact-section` class="nav-link">Contact</a></li>
         </ul>
     </div>
 </nav>
