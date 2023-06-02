@@ -2,24 +2,34 @@
 ---
 
 <div class="container">
-    <form name="contact" method="POST" class="container-form">
-        <label for="name" class="visually-hidden">Name</label>
+    <form
+        name="contact"
+        action="/pages/success"
+        method="POST"
+        netlify-honeypot="website-url"
+        class="container-form"
+        netlify
+    >
+        <label class="sr-only" for="website-url">Your website</label>
+        <input class="sr-only" type="text" name="website-url" tabindex="-1" autocomplete="off" />
+
+        <label for="name" class="sr-only">Name</label>
         <input type="text" name="name" placeholder="Name" />
 
-        <label for="email" class="visually-hidden">Email</label>
+        <label for="email" class="sr-only">Email</label>
         <input type="email" name="email" placeholder="Email" />
 
-        <label for="message" class="visually-hidden">Message</label>
+        <label for="message" class="sr-only">Message</label>
         <textarea name="message" placeholder="Leave a message"></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit" class="reset-button gradient-button">Send</button>
     </form>
 </div>
 
 <style>
     .container {
         width: 100%;
-        /* min-height: 80vh; */
+        padding-bottom: 8rem;
 
         display: flex;
         flex-direction: column;
@@ -33,12 +43,10 @@
     .container-form {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: center; */
         gap: 2rem;
     }
 
-    .visually-hidden {
+    .sr-only {
         position: absolute;
         overflow: hidden;
         clip: rect(0 0 0 0);
@@ -47,5 +55,40 @@
         margin: -1px;
         border: 0;
         padding: 0;
+    }
+
+    .reset-button {
+        background-color: transparent;
+        border-width: 0;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        padding: 0;
+    }
+
+    .gradient-button {
+        display: grid;
+        place-content: center;
+
+        width: 200px;
+        aspect-ratio: 3 / 1;
+
+        color: white;
+        cursor: pointer;
+
+        background-image: linear-gradient(to left, #743ad5, #d53a9d), url('../styles/noise.svg');
+
+        background-blend-mode: multiply;
+
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     }
 </style>
