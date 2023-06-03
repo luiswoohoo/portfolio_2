@@ -84,9 +84,6 @@ Custom properties (variables)
     --color2: oklch(65.49% 0.261 356.94);
     --color3: oklch(44.03% 0.16 303.37);
 
-    --color1-light: oklch(44.03% 0.16 303.37);
-    --color2-light: oklch(71.91% 0.106 356.94);
-
     /* Font sizes */
 
     --small: 12px;
@@ -136,7 +133,7 @@ Custom gradient scroll bar
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(var(--color1-light), var(--color2-light));
+    background: linear-gradient(var(--color1), var(--color2));
 
     border: 3px solid var(--light);
 }
