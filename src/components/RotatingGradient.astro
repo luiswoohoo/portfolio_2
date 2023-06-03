@@ -1,12 +1,12 @@
 ---
-const { color1, color2, color3, borderRadius, inset, rotationDuration, blur } = Astro.props
+const { borderRadius, inset, rotationDuration, blur } = Astro.props
 ---
 
 <div class="container">
     <slot />
 </div>
 
-<style define:vars={{ color1, color2, color3, borderRadius, inset, rotationDuration, blur }}>
+<style define:vars={{ borderRadius, inset, rotationDuration, blur }}>
     @property --gradient-angle {
         syntax: '<angle>';
         inherits: false;
@@ -27,11 +27,11 @@ const { color1, color2, color3, borderRadius, inset, rotationDuration, blur } = 
 
         background: conic-gradient(
             from var(--gradient-angle, 0deg),
-            var(--color1, rebeccapurple),
-            var(--color2, blue),
-            var(--color3, deeppink),
-            var(--color2, blue),
-            var(--color1, rebeccapurple)
+            var(--color1),
+            var(--dark),
+            var(--color2),
+            var(--dark),
+            var(--color3)
         );
         border-radius: inherit;
         animation: rotation linear infinite;

@@ -77,6 +77,16 @@ Custom properties (variables)
     --main-color: hsl(0, 0%, 16%);
     --main-bg-color: hsl(0, 0%, 99%);
 
+    --light: oklch(98.51% 0 0);
+    --dark: oklch(25.2% 0 0);
+
+    --color1: oklch(44.03% 0.16 303.37);
+    --color2: oklch(65.49% 0.261 356.94);
+    --color3: oklch(44.03% 0.16 303.37);
+
+    --color1-light: oklch(44.03% 0.16 303.37);
+    --color2-light: oklch(71.91% 0.106 356.94);
+
     /* Font sizes */
 
     --small: 12px;
@@ -97,9 +107,36 @@ html {
     }
 }
 
-/* Custom focus */
+/*
+Custom focus
+*/
 *:focus {
-    outline: 4px dotted deeppink;
+    outline: 4px dotted var(--color2);
     outline-offset: 2px;
     border-radius: 0;
+}
+
+/*
+Custom gradient scroll bar
+*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(var(--color1), var(--color2)), url('../styles/noise.svg');
+
+    background-blend-mode: multiply;
+
+    border: 3px solid var(--light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--color1-light), var(--color2-light));
+
+    border: 3px solid var(--light);
 }

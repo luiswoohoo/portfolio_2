@@ -1,7 +1,13 @@
 ---
 ---
 
-<form name="contact" method="POST" netlify-honeypot="website-url" class="container" data-netlify="true">
+<form
+    name="contact"
+    method="POST"
+    netlify-honeypot="website-url"
+    class="container"
+    data-netlify="true"
+>
     <label class="sr-only" for="website-url">Your website</label>
     <input class="sr-only" type="text" name="website-url" tabindex="-1" autocomplete="off" />
 
@@ -72,17 +78,14 @@
         color: white;
         cursor: pointer;
 
-        background-image: linear-gradient(to left, #743ad5, #d53a9d), url('../styles/noise.svg');
+        background-image: linear-gradient(to left, var(--color1), var(--color2)),
+            url('../styles/noise.svg');
 
         background-blend-mode: multiply;
-
-        /* background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%; */
 
         border: 10px solid;
         border-image-slice: 1;
         border-width: 2px;
-        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+        border-image-source: linear-gradient(to left, var(--color1), var(--color2));
     }
 </style>

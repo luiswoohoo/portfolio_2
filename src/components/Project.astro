@@ -18,8 +18,6 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
             href={`/projects/${slug}`}
             width={'200px'}
             aspectRatio={'2.5 / 1'}
-            color1={'#d53a9d'}
-            color2={'#743ad5'}
             transitionDelayStart={'0.2s'}
             transitionDelayEnd={'0.4s'}
         >
@@ -58,20 +56,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
 
     .project-link {
         display: block;
-        color: inherit;
-        text-decoration: none;
         cursor: pointer;
-    }
-
-    .project-link:link,
-    .project-link:visited {
-        color: inherit;
-    }
-
-    .project-link:focus,
-    .project-link:hover,
-    .project-link:active {
-        color: rebeccapurple;
     }
 
     @media screen and (min-width: 768px) {
