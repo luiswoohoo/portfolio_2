@@ -1,0 +1,25 @@
+---
+// Layout import
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const pageTitle = 'Thanks!'
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <div class="container">
+        <h1>Thanks!</h1>
+    </div>
+</BaseLayout>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+
+        border: 1px red solid;
+    }
+</style>
