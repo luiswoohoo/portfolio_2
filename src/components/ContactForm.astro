@@ -48,8 +48,10 @@
 
     .base-input {
         width: clamp(200px, 100%, 500px);
-        border: 2px black solid;
+        border: 2px var(--dark) solid;
         padding: 8px;
+
+        /* font-family: 'Space Grotesk'; */
 
         /* Reset styles */
         background-image: none;
@@ -75,7 +77,7 @@
         width: 200px;
         aspect-ratio: 3 / 1;
 
-        color: white;
+        color: var(--light);
         cursor: pointer;
 
         background-image: linear-gradient(to left, var(--color1), var(--color2)),

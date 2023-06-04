@@ -1,3 +1,40 @@
+/* 
+Fonts
+*/
+
+/* space-grotesk-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Space Grotesk'),
+        url('./fonts/space-grotesk-v15-latin-regular.woff2') format('woff2');
+}
+
+/* space-mono-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Space Mono'), url('./fonts/space-mono-v12-latin-700.woff2') format('woff2');
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+p,
+a,
+form {
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 400;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -5,8 +42,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-
-    /* border: 1px orange solid; */
 }
 
 /*
@@ -74,21 +109,12 @@ Custom properties (variables)
 */
 :root {
     /* Color */
-    --main-color: hsl(0, 0%, 16%);
-    --main-bg-color: hsl(0, 0%, 99%);
-
     --light: oklch(98.51% 0 0);
     --dark: oklch(25.2% 0 0);
 
     --color1: oklch(44.03% 0.16 303.37);
     --color2: oklch(65.49% 0.261 356.94);
     --color3: oklch(44.03% 0.16 303.37);
-
-    /* Font sizes */
-
-    --small: 12px;
-    --medium: 16px;
-    --large: 24px;
 }
 
 /* 
@@ -136,4 +162,15 @@ Custom gradient scroll bar
     background: linear-gradient(var(--color1), var(--color2));
 
     border: 3px solid var(--light);
+}
+
+/* 
+Dark mode
+*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Color */
+        --light: oklch(25.2% 0 0);
+        --dark: oklch(98.51% 0 0);
+    }
 }

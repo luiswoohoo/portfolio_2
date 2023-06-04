@@ -24,7 +24,7 @@ const { proj } = Astro.props
     <div class="container">
         <h1 class="project-title">{proj.name}</h1>
 
-        <div class="project-links">
+        <div>
             <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}
                 >Site</a
             >
@@ -56,6 +56,8 @@ const { proj } = Astro.props
         gap: 2rem;
 
         padding: 0 max(2rem, 50vw - 1200px / 2);
+
+        padding-bottom: 8rem;
     }
 
     .project-title {
@@ -74,9 +76,14 @@ const { proj } = Astro.props
     }
 
     .project-info {
-        max-width: 75ch;
+        max-width: 60ch;
         padding-top: 1rem;
 
         font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    a:link,
+    a:visited {
+        color: inherit;
     }
 </style>
