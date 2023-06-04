@@ -90,5 +90,13 @@
         border-image-slice: 1;
         border-width: 2px;
         border-image-source: linear-gradient(to left, var(--color1), var(--color2));
+
+        transition: translate ease 0.4s;
+    }
+
+    .gradient-button:focus,
+    .gradient-button:hover {
+        translate: 0 -2px;
+        transition: translate ease 0.2s;
     }
 </style>

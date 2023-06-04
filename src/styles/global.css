@@ -112,9 +112,8 @@ Custom properties (variables)
     --light: oklch(98.51% 0 0);
     --dark: oklch(25.2% 0 0);
 
-    --color1: oklch(44.03% 0.16 303.37);
-    --color2: oklch(65.49% 0.261 356.94);
-    --color3: oklch(44.03% 0.16 303.37);
+    --color1: oklch(35% 0.5 313);
+    --color2: oklch(80% 0.4 222);
 }
 
 /* 
@@ -170,7 +169,11 @@ Dark mode
 @media (prefers-color-scheme: dark) {
     :root {
         /* Color */
+        /* Swap light and dark */
         --light: oklch(25.2% 0 0);
         --dark: oklch(98.51% 0 0);
+
+        --color1: oklch(44.03% 0.16 303.37);
+        --color2: oklch(65.49% 0.261 356.94);
     }
 }
