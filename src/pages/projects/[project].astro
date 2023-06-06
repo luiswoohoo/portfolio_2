@@ -27,8 +27,13 @@ const { proj } = Astro.props
         {
             proj.longDescription.code.length > 0 && (
                 <div class="link-container">
-                    <a href={proj.longDescription.code}>GitHub</a> |{' '}
-                    <a href={proj.longDescription.site}>Site</a>
+                    <a href={proj.longDescription.code} target="_blank">
+                        code
+                    </a>{' '}
+                    <span>|</span>
+                    <a href={proj.longDescription.site} target="_blank">
+                        live site
+                    </a>
                 </div>
             )
         }
@@ -97,9 +102,23 @@ const { proj } = Astro.props
         justify-content: space-around;
     }
 
+    span {
+        padding: 0 1rem;
+    }
+
     a {
         padding: 0 0.5rem;
-        transition: translate ease 0.4s;
+        /* transition: translate ease 0.4s; */
+    }
+
+    a:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        border-bottom: 2px solid var(--color2);
+
+        transition: width ease 0.4s;
     }
 
     a:link,
@@ -111,7 +130,13 @@ const { proj } = Astro.props
 
     a:focus,
     a:hover {
-        translate: 0 -2px;
-        transition: translate ease 0.2s;
+        /* translate: 0 -2px;
+        transition: translate ease 0.2s; */
+    }
+
+    a:focus:after,
+    a:hover:after {
+        width: 0%;
+        transition: width ease 0.2s;
     }
 </style>
