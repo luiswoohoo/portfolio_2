@@ -1,5 +1,5 @@
 const prod = {
-    url: 'https://luport.netlify.app/',
+    url: 'https://luisaguinaga.dev/',
 }
 const dev = {
     url: 'http://localhost:3000/',

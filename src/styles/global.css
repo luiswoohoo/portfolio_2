@@ -9,8 +9,9 @@ Fonts
     font-style: normal;
     font-weight: 400;
     src: local('Space Grotesk'),
-        url('./fonts/space-grotesk-v15-latin-regular.woff2') format('woff2');
+        url('/styles/fonts/space-grotesk-v15-latin-regular.woff2') format('woff2');
 }
+
 
 /* space-mono-700 - latin */
 @font-face {
@@ -18,7 +19,7 @@ Fonts
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    src: local('Space Mono'), url('./fonts/space-mono-v12-latin-700.woff2') format('woff2');
+    src: local('Space Mono'), url('/styles/fonts/space-mono-v12-latin-700.woff2') format('woff2');
 }
 
 h1,
