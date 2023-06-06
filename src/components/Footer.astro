@@ -41,12 +41,23 @@
         align-items: center;
         justify-content: space-around;
 
-        padding: 2rem 0 1rem 0;
+        /* padding: 2rem 0 1rem 0; */
+        padding-bottom: 1rem;
     }
 
     .social {
         display: flex;
         gap: 2rem;
+    }
+
+    .social > a {
+        transition: translate ease 0.4s;
+    }
+
+    .social > a:focus,
+    .social > a:hover {
+        translate: 0 -2px;
+        transition: translate ease 0.2s;
     }
 
     .social svg {

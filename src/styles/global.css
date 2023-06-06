@@ -150,7 +150,7 @@ Custom gradient scroll bar
 }
 
 ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(var(--color1), var(--color2)), url('../styles/noise.svg');
+    background: linear-gradient(var(--color1), var(--color2)), url('../styles/noise.svg');
 
     background-blend-mode: multiply;
 
@@ -158,9 +158,9 @@ Custom gradient scroll bar
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(var(--color1), var(--color2));
-
     border: 3px solid var(--light);
+
+    background: linear-gradient(var(--color1), var(--color2));
 }
 
 /* 
