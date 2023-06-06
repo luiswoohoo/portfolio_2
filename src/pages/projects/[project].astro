@@ -24,17 +24,20 @@ const { proj } = Astro.props
     <div class="container">
         <h1 class="project-title">{proj.name}</h1>
 
-        <div>
-            <a href={proj.longDescription.code}>GitHub</a> | <a href={proj.longDescription.site}
-                >Site</a
-            >
-        </div>
+        {
+            proj.longDescription.code.length > 0 && (
+                <div>
+                    <a href={proj.longDescription.code}>GitHub</a> |{' '}
+                    <a href={proj.longDescription.site}>Site</a>
+                </div>
+            )
+        }
 
         <section>
             <p class="project-info">{proj.longDescription.intro}</p>
         </section>
 
-        <CldImage src={proj.src} width={1400} height={700} alt={proj.alt} />
+        <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} />
 
         <section>
             <h2 class="subtitle">Problems Encountered</h2>
@@ -45,6 +48,8 @@ const { proj } = Astro.props
             <h2 class="subtitle">Lessons Learned</h2>
             <p class="project-info">{proj.longDescription.lessons}</p>
         </section>
+
+        {!!proj.image2 && <CldImage src={proj.image2.src} width={1400} height={700} alt={proj.image2.alt} />}
     </div>
 </BaseLayout>
 
@@ -78,6 +83,7 @@ const { proj } = Astro.props
     .project-info {
         max-width: 60ch;
         padding-top: 1rem;
+        padding-bottom: 2rem;
 
         font-size: clamp(1.2rem, 5vw, 1.5rem);
     }
