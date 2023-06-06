@@ -19,7 +19,7 @@ const projectsData = [
         longDescription: {
             intro: `I was looking for a simple flashcard app to help me learn Japanese, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something minimalistic without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one. The user experience is best on mobile.`,
             problems: `Initially, moving from one card to the next was implemented by using the push and pop array methods. The card displayed on screen was always the first card in an array. This worked well and the code was simple. However, when I decided to implement what seemed like a very simple feature, display the total number of cards and the number of the current card, I had to rewrite the logic.`,
-            lessons: `Don't underestimate seemingly simple features. And keep working until you figure it out. Also, I learned the importance of doing some research before building anything to see if there's even a need for it. Although I wanted to add a few more features to the app (below are some sketches of what I had in mind at the time), most of the people I showed it to didn't seem too enthused. Regardless this project scratched an itch and I just wanted to see if I could code the thing.`,
+            lessons: `Don't underestimate seemingly simple features. And keep working until you figure it out. Also, I learned the importance of doing some research before building anything to see if there's even a need for it. Although I wanted to add a few more features to the app (below are some sketches of what I had in mind at the time), most of the people I showed it to didn't seem too enthused 😒. Regardless this project scratched an itch and I just wanted to see if I could code the thing.`,
             code: `https://github.com/luiswoohoo/flashcards_app`,
             site: `https://cardstack.netlify.app/`,
         },
@@ -38,7 +38,7 @@ const projectsData = [
         longDescription: {
             intro: `A quiz app built with React that pulls trivia from the Open Trivia DB API. The design is from Scrimba.com, but I coded the app from scratch (for the most part).`,
             problems: `What probably caused the most head scratching was figuring out what needed to be stored in state. I kept going back and forth adding more state and then removing it until I finally ended up with what I felt was truly necessary. Another funny little bug had to do with HTML entities.`,
-            lessons: `As much as I wanted to write everything from scratch sometimes it just makes the most sense to bring in some 3rd party code. Whether it's to deal with rabbit hole inducing edge cases like HTML entity bugs or something fun like confetti.`,
+            lessons: `As much as I wanted to write everything from scratch sometimes it just makes the most sense to bring in some 3rd party code. Whether it's to deal with rabbit hole inducing edge cases like HTML entity bugs or something fun like confetti. 🥳`,
             code: `https://github.com/luiswoohoo/quizzical`,
             site: `https://quizzicalr.netlify.app/`,
         },
