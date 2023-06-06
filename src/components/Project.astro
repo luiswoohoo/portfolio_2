@@ -26,9 +26,7 @@ const slug = name.replaceAll(/\s/g, '').toLowerCase()
     </div>
 
     <div class="project-image">
-        <a href=`/projects/${slug}` class="project-link">
-            <CldImage src={src} width={width} height={height} alt={alt} />
-        </a>
+        <CldImage src={src} width={width} height={height} alt={alt} />
     </div>
 </div>
 

@@ -26,7 +26,7 @@ const { proj } = Astro.props
 
         {
             proj.longDescription.code.length > 0 && (
-                <div>
+                <div class="link-container">
                     <a href={proj.longDescription.code}>GitHub</a> |{' '}
                     <a href={proj.longDescription.site}>Site</a>
                 </div>
@@ -49,7 +49,11 @@ const { proj } = Astro.props
             <p class="project-info">{proj.longDescription.lessons}</p>
         </section>
 
-        {!!proj.image2 && <CldImage src={proj.image2.src} width={1400} height={700} alt={proj.image2.alt} />}
+        {
+            !!proj.image2 && (
+                <CldImage src={proj.image2.src} width={1400} height={700} alt={proj.image2.alt} />
+            )
+        }
     </div>
 </BaseLayout>
 
@@ -88,8 +92,26 @@ const { proj } = Astro.props
         font-size: clamp(1.2rem, 5vw, 1.5rem);
     }
 
+    .link-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        padding: 0 0.5rem;
+        transition: translate ease 0.4s;
+    }
+
     a:link,
     a:visited {
         color: inherit;
+        text-decoration: none;
+        text-transform: lowercase;
+    }
+
+    a:focus,
+    a:hover {
+        translate: 0 -2px;
+        transition: translate ease 0.2s;
     }
 </style>

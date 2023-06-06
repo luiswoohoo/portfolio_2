@@ -3,18 +3,23 @@ const projectsData = [
         name: 'Card Stack',
         tech: 'React • Styled Components',
         description: `I was looking for a simple flashcard app, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I made my own.`,
-        image: { src: 'CardStack_gttvbn', width: '500', height: '480', alt: 'Flashcards app' },
+        image: {
+            src: 'CardStack_gttvbn',
+            width: '500',
+            height: '480',
+            alt: 'Cardstack app with cat emoji on a card',
+        },
         image2: {
-            src: 'cardstack_sketches_black_ytcfyq',
+            src: 'cardstack_sketches_black_gray_o33fxt',
             width: '500',
             height: '480',
             alt: 'Sketches of potential features',
         },
 
         longDescription: {
-            intro: `I was looking for a simple flashcard app to aid in learning Japanese, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something minimalistic without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
+            intro: `I was looking for a simple flashcard app to help me learn Japanese, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something minimalistic without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
             problems: `Initially, moving from one card to the next was implemented by using the push and pop array methods. The card displayed on screen was always the first card in an array. This worked well and the code was simple. However, when I decided to implement what seemed like a very simple feature, display the total number of cards and the number of the current card, I had to rewrite the logic.`,
-            lessons: `Don't underestimate seemingly simple features. And keep working until you figure it out. Also, I learned the importance of doing some research before building anything to see if there's even a need for it. Although I wanted to add a few more features to the app (below are some sketches of what I had in mind at the time), most of the people I showed it to didn't seem too enthused. Some had never even heard of flashcards! Regardless this project scratched an itch and I just wanted to see if I could code the thing.`,
+            lessons: `Don't underestimate seemingly simple features. And keep working until you figure it out. Also, I learned the importance of doing some research before building anything to see if there's even a need for it. Although I wanted to add a few more features to the app (below are some sketches of what I had in mind at the time), most of the people I showed it to didn't seem too enthused. Regardless this project scratched an itch and I just wanted to see if I could code the thing.`,
             code: `https://github.com/luiswoohoo/flashcards_app`,
             site: `https://cardstack.netlify.app/`,
         },
@@ -23,7 +28,12 @@ const projectsData = [
         name: 'Quizzical',
         tech: 'React',
         description: `A quiz app built with React that pulls trivia from the Open Trivia DB API.`,
-        image: { src: 'Quizzical_mgqb7k', width: '500', height: '480', alt: 'Quiz app' },
+        image: {
+            src: 'Quizzical_mgqb7k',
+            width: '500',
+            height: '480',
+            alt: 'Example of Quizzical quiz',
+        },
 
         longDescription: {
             intro: `A quiz app built with React that pulls trivia from the Open Trivia DB API. The design is from Scrimba.com, but I coded the app from scratch (for the most part).`,
@@ -37,7 +47,12 @@ const projectsData = [
         name: 'Movie Watchlist',
         tech: 'JS • Serverless Functions',
         description: `An app for creating a movie watchlist. It's built in vanilla JS and pulls movie data from the OMDB API.`,
-        image: { src: 'MovieFinder_figuse', width: '500', height: '480', alt: 'Movie finder app' },
+        image: {
+            src: 'MovieFinder_figuse',
+            width: '500',
+            height: '480',
+            alt: 'Example of a movie search',
+        },
 
         longDescription: {
             intro: `An app for creating a movie watchlist. It's built in vanilla JS and pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
@@ -51,7 +66,12 @@ const projectsData = [
         name: 'Invoice Automation',
         tech: 'Google Apps Script',
         description: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. I was able to speed up my workflow and discovered how much I enjoy coding.`,
-        image: { src: 'GAS_kyjfhj', width: '500', height: '480', alt: 'Google Apps Script' },
+        image: {
+            src: 'GAS_kyjfhj',
+            width: '500',
+            height: '480',
+            alt: 'Script used for invoice automation',
+        },
 
         longDescription: {
             intro: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This sparked my motivation to consider coding as a career.`,

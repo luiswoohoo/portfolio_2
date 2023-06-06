@@ -112,8 +112,9 @@ Custom properties (variables)
     --light: oklch(98.51% 0 0);
     --dark: oklch(25.2% 0 0);
 
-    --color1: oklch(35% 0.5 313);
-    --color2: oklch(80% 0.4 222);
+    --color1: oklch(55.54% 0.117 337.8);
+    /* Syntax yellow */
+    --color2: oklch(85.36% 0.17452706879621713 87.52541933013372);
 }
 
 /* 
