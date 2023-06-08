@@ -8,10 +8,8 @@ Fonts
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
-    src: local('Space Grotesk'),
-        url('/fonts/space-grotesk-v15-latin-regular.woff2') format('woff2');
+    src: local('Space Grotesk'), url('/fonts/space-grotesk-v15-latin-regular.woff2') format('woff2');
 }
-
 
 /* space-mono-700 - latin */
 @font-face {
@@ -116,6 +114,8 @@ Custom properties (variables)
     --color1: oklch(55.54% 0.117 337.8);
     /* Syntax yellow */
     --color2: oklch(85.36% 0.17452706879621713 87.52541933013372);
+
+    --bg-grid-opacity: 0.04;
 }
 
 /* 
@@ -123,6 +123,7 @@ Scroll behavior
  */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion) {
@@ -152,7 +153,7 @@ Custom gradient scroll bar
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--color1), var(--color2)), url('../styles/noise.svg');
+    background: linear-gradient(var(--color1), var(--color2)), url('/assets/noise.svg');
 
     background-blend-mode: multiply;
 
@@ -177,5 +178,7 @@ Dark mode
 
         --color1: oklch(44.03% 0.16 303.37);
         --color2: oklch(65.49% 0.261 356.94);
+
+        --bg-grid-opacity: 0.01;
     }
 }

@@ -7,6 +7,7 @@ import { projectsData } from '../scripts/projectsData'
 ---
 
 <section id="projects-section" class="projects-section">
+    <div class="bg-grid"></div>
     <h2 class="title">Projects</h2>
     <div class="projects">
         {
@@ -27,6 +28,34 @@ import { projectsData } from '../scripts/projectsData'
 <style>
     .projects-section {
         padding: 0 max(2rem, 50vw - 1200px / 2);
+
+        position: relative;
+        isolation: isolate;
+    }
+
+    .bg-grid {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+
+        opacity: var(--bg-grid-opacity);
+
+        background-size: 20px 20px;
+        background-position: center;
+
+        background-image: linear-gradient(to right, var(--dark) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--dark) 1px, transparent 1px);
+
+        image-rendering: pixelated;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            10%,
+            var(--dark),
+            90%,
+            transparent
+        );
+        mask-image: linear-gradient(to bottom, transparent, 10%, var(--dark), 90%, transparent);
     }
     .title {
         font-size: clamp(2.5rem, 5vw, 4rem);

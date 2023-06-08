@@ -40,9 +40,12 @@ const { pageTitle } = Astro.props
         <title>{pageTitle}</title>
     </head>
     <body>
-        <NavBar />
-        <slot />
-        <Footer />
+        <div class="container">
+            <div class="noise"></div>
+            <NavBar />
+            <slot />
+            <Footer />
+        </div>
     </body>
 </html>
 
@@ -54,5 +57,20 @@ const { pageTitle } = Astro.props
 
         background-color: var(--light);
         color: var(--dark);
+    }
+
+    .container {
+        position: relative;
+        isolation: isolate;
+    }
+
+    .noise {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+
+        opacity: var(--bg-grid-opacity);
+
+        background-image: url(/assets/noise-heavy.png);
     }
 </style>
