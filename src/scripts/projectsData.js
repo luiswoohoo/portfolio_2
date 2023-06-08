@@ -57,7 +57,7 @@ const projectsData = [
         longDescription: {
             intro: `An app for creating a movie watchlist. It's built in vanilla JS and pulls movie data from the OMDB API. A couple of serverless functions are used to hide the API key from the client. The design is from Scrimba.com, but I built the app completely from scratch.`,
             problems: `I didn't want to expose my API key. After doing some research I decided to use serverless functions to hide it. This was definitely the trickiest part of this little project. Not so much because the code involved was complicated, but simply because it was my first time using serverless functions.`,
-            lessons: `The security aspect of this project (i.e. hiding the API key) is what took the longest to figure out. It probably wasn't even necessary considering it's such a low stakes project. But it was worth the extra time to research and learn.`,
+            lessons: `The security aspect of this project (i.e. hiding the API key) is what took the longest to figure out. It probably wasn't even necessary considering it's such a low stakes project. But it was worth the extra time to research and learn why security is so important.`,
             code: `https://github.com/luiswoohoo/movie_search_test`,
             site: `https://mov-watch.netlify.app/`,
         },
@@ -76,7 +76,7 @@ const projectsData = [
         longDescription: {
             intro: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This sparked my motivation to consider coding as a career.`,
             problems: `Making multiple copies of a single file in Google Drive is a slow manual process since it requires making each copy one by one. After doing this a few times I knew there had to be a better way.`,
-            lessons: `I've heard that coding is a super power. Even just shaving a few minutes from my daily workflow was worth investing the time to learn a little bit of JavaScript.`,
+            lessons: `I've heard that coding is a super power. So is knowing how to google stuff.`,
             code: ``,
             site: ``,
         },
