@@ -179,6 +179,6 @@ Dark mode
         --color1: oklch(44.03% 0.16 303.37);
         --color2: oklch(65.49% 0.261 356.94);
 
-        --bg-grid-opacity: 0.01;
+        --bg-grid-opacity: 0.02;
     }
 }
