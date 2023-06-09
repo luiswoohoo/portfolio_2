@@ -19,7 +19,7 @@ import RotatingGradient from './RotatingGradient.astro'
                 alt={'profile pic smiling and making peace sign'}
             />
         </RotatingGradient>
-        <h1 class="title">Hi! I'm Luis<br />A Web Developer</h1>
+        <h1 class="title"><span>Hi! I'm Luis</span><span>A Web Developer</span></h1>
     </div>
 </header>
 
@@ -50,5 +50,9 @@ import RotatingGradient from './RotatingGradient.astro'
         font-size: clamp(2.5rem, 5vw, 4rem);
         text-align: center;
         line-height: 1.2;
+    }
+
+    .title span {
+        display: block;
     }
 </style>
