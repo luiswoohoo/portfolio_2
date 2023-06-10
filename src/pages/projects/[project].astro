@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 // Component imports
 import CldImage from '../../components/CldImage.astro'
+import CldVideo from '../../components/CldVideo.astro'
 
 // Data import
 import { projectsData } from '../../scripts/projectsData'
@@ -42,7 +43,24 @@ const { proj } = Astro.props
             <p class="project-info">{proj.longDescription.intro}</p>
         </section>
 
-        <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} />
+        {
+            !!proj.video && (
+                <CldVideo
+                    srcVideo={proj.video.src}
+                    srcImage={proj.image.src}
+                    width={proj.video.width}
+                    height={proj.video.height}
+                />
+            )
+        }
+
+        {
+            !proj.video && (
+                <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} />
+            )
+        }
+
+        <!-- <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} /> -->
 
         <section>
             <h2 class="subtitle">Problems Encountered</h2>

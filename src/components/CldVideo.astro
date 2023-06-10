@@ -1,0 +1,27 @@
+---
+import { Cloudinary } from '@cloudinary/url-gen'
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'dh639nmhw',
+    },
+})
+
+const { srcVideo, srcImage, width, height } = Astro.props
+
+let cldSrcImage = cld
+    .image(srcImage)
+    .format('auto')
+    .delivery('q_auto')
+    .resize(`c_fill,w_${width},h_${height},ar_16:9`)
+
+let cldSrcVideo = cld
+    .video(srcVideo)
+    .format('auto')
+    .delivery('q_auto')
+    .resize(`c_fill,w_${width},h_${height},ar_16:9`)
+---
+
+<video controls preload="none" poster={cldSrcImage.toURL()} width={width}>
+    <source src={cldSrcVideo.toURL()} />
+</video>
