@@ -81,7 +81,7 @@ const projectsData = [
         longDescription: {
             intro: `I was creating invoices for a trucking company and wondered if there was a way to automate the process. That's when I discovered Google Apps Script. It's essentially JS with methods that tap into Google Drive. I was able to speed up my workflow and discovered how much I enjoy coding. This sparked my motivation to consider coding as a career.`,
             problems: `Making multiple copies of a single file in Google Drive is a slow manual process since it requires making each copy one by one. After doing this a few times I knew there had to be a better way.`,
-            lessons: `I've heard that coding is a super power. So is knowing how to google stuff.`,
+            lessons: `Coding is a super power. So is knowing how to google stuff.`,
             code: ``,
             site: ``,
         },

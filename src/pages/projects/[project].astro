@@ -60,8 +60,6 @@ const { proj } = Astro.props
             )
         }
 
-        <!-- <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} /> -->
-
         <section>
             <h2 class="subtitle">Problems Encountered</h2>
             <p class="project-info">{proj.longDescription.problems}</p>
@@ -81,18 +79,18 @@ const { proj } = Astro.props
 </BaseLayout>
 
 <style>
+    * {
+        border: 1px red solid;
+    }
+
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        justify-items: center;
         gap: 2rem;
 
         padding: 0 max(2rem, 50vw - 1200px / 2);
 
         padding-bottom: 8rem;
-
-        position: relative;
-        isolation: isolate;
     }
 
     .project-title {
