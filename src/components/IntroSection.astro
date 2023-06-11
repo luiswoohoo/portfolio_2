@@ -6,19 +6,21 @@ import RotatingGradient from './RotatingGradient.astro'
 
 <header>
     <div class="container">
-        <RotatingGradient
-            borderRadius={'50%'}
-            inset={'-0.1rem'}
-            rotationDuration={'5s'}
-            blur={'5rem'}
-        >
-            <CldImageRound
-                src={'Self_Portrait_01_exqkxi'}
-                width={300}
-                height={300}
-                alt={'profile pic smiling and making peace sign'}
-            />
-        </RotatingGradient>
+        <div class="container-image">
+            <RotatingGradient
+                borderRadius={'50%'}
+                inset={'-0.1rem'}
+                rotationDuration={'5s'}
+                blur={'5rem'}
+            >
+                <CldImageRound
+                    src={'Self_Portrait_01_exqkxi'}
+                    width={340}
+                    height={340}
+                    alt={'profile pic smiling and making peace sign'}
+                />
+            </RotatingGradient>
+        </div>
         <h1 class="title"><span>Hi! I'm Luis</span><span>A Web Developer</span></h1>
     </div>
 </header>
@@ -44,6 +46,11 @@ import RotatingGradient from './RotatingGradient.astro'
         gap: 1rem;
 
         width: 100%;
+    }
+
+    .container-image {
+        width: clamp(280px, 40vw, 340px);
+        aspect-ratio: 1:1;
     }
 
     .title {
