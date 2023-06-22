@@ -15,11 +15,12 @@ const projectsData = [
             height: '480',
             alt: 'Sketches of potential features',
         },
-        video: {
-            src: 'CardStack_demo_o25a7k',
-            width: '1180',
-            height: '700',
-        },
+        // Video not working in Safari
+        // video: {
+        //     src: 'CardStack_demo_o25a7k',
+        //     width: '1180',
+        //     height: '700',
+        // },
 
         longDescription: {
             intro: `I was looking for a simple flashcard web app for my phone to help me learn Japanese, but most of the apps that I found required signing up and they just didn't have the look and feel that I wanted. So I decided to make my own. I wanted something minimalistic without a bunch of features getting in the way of the simple process of flipping a card and then moving on to the next one.`,
