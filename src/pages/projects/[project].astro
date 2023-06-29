@@ -45,18 +45,22 @@ const { proj } = Astro.props
 
         {
             !!proj.video && (
-                <CldVideo
-                    srcVideo={proj.video.src}
-                    srcImage={proj.image.src}
-                    width={proj.video.width}
-                    height={proj.video.height}
-                />
+                <div class="image-container">
+                    <CldVideo
+                        srcVideo={proj.video.src}
+                        srcImage={proj.image.src}
+                        width={proj.video.width}
+                        height={proj.video.height}
+                    />
+                </div>
             )
         }
 
         {
             !proj.video && (
-                <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} />
+                <div class="image-container">
+                    <CldImage src={proj.image.src} width={1400} height={700} alt={proj.image.alt} />
+                </div>
             )
         }
 
@@ -72,7 +76,14 @@ const { proj } = Astro.props
 
         {
             !!proj.image2 && (
-                <CldImage src={proj.image2.src} width={1400} height={700} alt={proj.image2.alt} />
+                <div class="image-container">
+                    <CldImage
+                        src={proj.image2.src}
+                        width={1400}
+                        height={700}
+                        alt={proj.image2.alt}
+                    />
+                </div>
             )
         }
     </div>
@@ -80,13 +91,22 @@ const { proj } = Astro.props
 
 <style>
     .container {
-        display: grid;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
         gap: 2rem;
 
         padding: 0 max(2rem, 50vw - 1200px / 2);
 
         padding-bottom: 8rem;
+    }
+
+    .link-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-container {
+        align-self: center;
     }
 
     .project-title {
@@ -105,16 +125,23 @@ const { proj } = Astro.props
     }
 
     .project-info {
-        max-width: 60ch;
         padding-top: 1rem;
         padding-bottom: 2rem;
 
         font-size: clamp(1.2rem, 5vw, 1.5rem);
     }
 
-    .link-container {
+    section {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subtitle,
+    .project-info {
+        /* Max width is roughly 60ch */
+        max-width: calc(60 * 1.2 * 12px);
+        flex: 1 100%;
     }
 
     span {
