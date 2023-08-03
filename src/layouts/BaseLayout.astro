@@ -43,6 +43,15 @@ const { pageTitle } = Astro.props
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
 
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="noise"></div>
+            <NavBar />
+            <slot />
+            <Footer />
+        </div>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSCWNMVXJJ"></script>
         <script>
@@ -54,16 +63,6 @@ const { pageTitle } = Astro.props
 
             gtag('config', 'G-RSCWNMVXJJ')
         </script>
-
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="noise"></div>
-            <NavBar />
-            <slot />
-            <Footer />
-        </div>
     </body>
 </html>
 
