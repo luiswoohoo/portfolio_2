@@ -16,4 +16,4 @@ let cldSrc = cld
     .resize(`c_fill,w_${width},h_${height},ar_16:9`)
 ---
 
-<img src={cldSrc.toURL()} loading="lazy" alt={alt} />
+<img src={cldSrc.toURL()} loading="lazy" alt={alt} width={width} height={height}/>
