@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions'
+
 import NavBar from '../components/NavBar.astro'
 import Footer from '../components/Footer.astro'
 
@@ -44,6 +46,7 @@ const { pageTitle } = Astro.props
         <meta name="theme-color" content="#ffffff" />
 
         <title>{pageTitle}</title>
+        <ViewTransitions />
     </head>
     <body>
         <div class="container">
